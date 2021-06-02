@@ -3,7 +3,7 @@ gradle引入`okdownload`、`sqlite`、`okdownload-ext`，无论是否需要`sqli
 ```
 implementation 'com.liulishuo.okdownload:okdownload:1.0.7'
 implementation 'com.liulishuo.okdownload:sqlite:1.0.7'
-implementation 'in.xiandanin.okdownload-ext:1.0.7'
+implementation 'in.xiandanin:okdownload-ext:1.0.7'
 ```
 
 在`Application#onCrate`调用，注意此方法会替换现有配置
