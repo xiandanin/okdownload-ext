@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.7"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compileOnly 'com.liulishuo.okdownload:okdownload:1.0.7'
+}
+
+ext {
+    groupId = 'in.xiandan'
+    description = '为了快速解决使用okdownload时的一些问题'
+    gitUrl = 'https://github.com/xiandanin/okdownload-ext'
+    authorEmail = 'denghahae@gmail.com'
+    license = 'MIT'
+}
+apply from: 'publish.gradle'
