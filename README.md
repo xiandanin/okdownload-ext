@@ -14,7 +14,7 @@ OkDownloadExt.fix415Bug(this);
 在`taskEnd`使用`StatusUtil.isCompleted(task)`判断是否下载完成
 
 ## 问题详情
-##### The current offset on block-info isn't update correct, 58953018 != 69212754 on 0
+#### The current offset on block-info isn't update correct, 58953018 != 69212754 on 0
 
 ```
 2021-06-01 21:40:31.206 9284-9284/ W/System.err: java.io.IOException: The current offset on block-info isn't update correct, 58953018 != 69212754 on 0
@@ -87,14 +87,14 @@ OkDownload.setSingletonInstance(
                 .build());
 ```
 
-##### 实际未下载完成，但在`taskEnd`回调`COMPLETED`
+#### 实际未下载完成，但在`taskEnd`回调`COMPLETED`
 
 在`taskEnd`中使用`StatusUtil.isCompleted`判断是否下载完成
 ```
 StatusUtil.isCompleted(task)
 ```
 
-##### 实际下载成功，但`StatusUtil.isCompletedOrUnknown`返回`UNKNOWN`，导致`StatusUtil.isCompleted`返回false
+#### 实际下载成功，但`StatusUtil.isCompletedOrUnknown`返回`UNKNOWN`，导致`StatusUtil.isCompleted`返回false
 根据[okdownload#244](https://github.com/lingochamp/okdownload/issues/244)，再引入sqlite库
 ```
 implementation 'com.liulishuo.okdownload:sqlite:1.0.7'
